@@ -1,5 +1,5 @@
 {
- "version": 2,
+  "version": 2,
   "builds": [
     {
       "src": "api/index.php",
@@ -7,6 +7,14 @@
     }
   ],
   "routes": [
+    {
+      "src": "/img/(.*)",
+      "dest": "/public/img/$1"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/public/css/$1"
+    },
     {
       "handle": "filesystem"
     },
